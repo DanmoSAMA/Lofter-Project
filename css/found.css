@@ -1,0 +1,123 @@
+.header-wrapper{
+    position: relative;
+    top: 64px;
+    height: 90px;
+    line-height: 90px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+}
+.header{
+    height: 90px;
+}
+.header > a{
+    width: 153px;
+    height: 87px;
+    font-size: 20px;
+    color: #25292C;
+    float: left;
+}
+.header > a:nth-of-type(1){
+    border-bottom: 3px solid #9EC500;
+}
+.header > a:hover{
+    border-bottom: 3px solid #9EC500;
+}
+.main{
+    position: relative;
+    top: 115px;
+    width: 1280px;
+    margin: 0 auto;
+    /* 
+        display: grid;
+        grid-template-columns: 300px 300px 300px 300px;
+        gap: 20px 20px;
+        grid-auto-columns: dense; 
+    */
+}
+.waterfall-item{
+    width: 300px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    background-color: #fff;
+    position: absolute;
+}
+.waterfall-item .user-info{
+    width: 300px;
+    height: 58px;
+    line-height: 58px;
+    border-bottom: 1px solid #EDEDEF;
+    position: relative;
+}
+.waterfall-item .user-info > img{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    cursor: pointer;
+}
+.waterfall-item .user-info > span{
+    position: absolute;
+    font-size: 14px;
+    cursor: pointer;
+}
+.waterfall-item .user-info > span:nth-of-type(1){
+    height: 58px;
+    left: 55px;
+}
+.waterfall-item .user-info > span:nth-of-type(2){
+    width: 52px;
+    height: 26px;
+    line-height: 26px;
+    right: 0;
+    margin: 16px;
+    color: #9EC500;
+    border: 1px solid #9EC500;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.waterfall-item > img{
+    width: 300px;
+    margin-top: 1px;
+    cursor: zoom-in;
+}
+.waterfall-item .description{
+    width: 270px;
+    padding: 0 15px;
+    margin-top: 12px;
+    font-size: 14px;
+    color: #666;
+    text-align: left;
+    min-height: 60px;
+    line-height: 20px;
+}
+.waterfall-item .like{
+    width: 300px;
+    height: 54px;
+    line-height: 54px;
+    border-top: 1px solid #EDEDEF;
+}
+.waterfall-item .like > i,
+.waterfall-item .like > span{
+    float: left;
+    color: #AAAAAA;
+    font-size: 14px;
+}
+.waterfall-item .like > i{
+    margin: 0 10px 0 15px;
+    cursor: pointer;
+}
+.waterfall-item .like > i:hover{
+    color: #E3E3E3;
+}
+.loaded{
+    display: block;
+}
+.waterfall-item:not(.loaded){
+    display: none;
+}

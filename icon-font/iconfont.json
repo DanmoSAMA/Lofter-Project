@@ -6,6 +6,48 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "2439664",
+      "name": "家",
+      "font_class": "fl-jia",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "6153273",
+      "name": "横",
+      "font_class": "heng",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "15775480",
+      "name": "钟表",
+      "font_class": "zhongbiao",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "7516884",
+      "name": "返回顶部",
+      "font_class": "fanhuidingbu",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "14666073",
+      "name": "向下",
+      "font_class": "xiangxia",
+      "unicode": "e72f",
+      "unicode_decimal": 59183
+    },
+    {
+      "icon_id": "12736519",
+      "name": "更多",
+      "font_class": "gengduo",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
       "icon_id": "5802479",
       "name": "放大镜",
       "font_class": "Magnifier",

@@ -7,7 +7,7 @@
 body{
     font: 14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
     color: #333;
-    min-width: 925px;
+    min-width: 928px;
     background-color: #EDEDEF;
     text-align: center;
 }
@@ -43,4 +43,183 @@ a{
 
 .hover-pointer{
     cursor: pointer;
+}
+
+/*上方导航条*/
+.topbar-wrapper{
+    height: 64px;
+    width: 100%;
+    background-color: #1F1F1F;
+    color: #999999;
+    position: fixed;
+    z-index: 9999;
+}
+.topbar > div{
+    float: left;
+    line-height: 64px;
+}
+.topbar-img{
+    width: 160px;
+    margin-right: 27px;
+    height: 64px;
+}
+.topbar img{
+    height: 64px;
+    width: 160px;
+    cursor: pointer;
+}
+.topbar-menu{
+    width: 240px;
+    margin-right: 27px;
+}
+.topbar-menu > div{
+    float: left;
+    width: 80px;
+    height: 64px;
+    font-weight: bold;
+}
+.topbar-menu a,
+.topbar-icons i{
+    transition: color .3s;
+}
+.topbar-menu a:hover{
+    color: #fff;
+}
+.topbar-input{
+    width: 232px;
+    margin-right: 27px;
+    height: 64px;
+    position: relative;
+    bottom: 2.5px;
+}
+.topbar-input input{
+    width: 192px;
+    height: 20px;
+    outline: none;
+    border: none;
+    padding: 6px 0 6px 36px;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+}
+.topbar-input input:focus ~ span{
+    display: none;
+}
+.topbar-input input:focus ~ .pop-up{
+    visibility: visible;
+    top: 78px;
+}
+.topbar-input > i{
+    position: absolute;
+    left: 15px;
+    top: 5px;
+}
+.topbar-input > span{
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    line-height: 24px;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+    background-color: #E6E6E6;
+    font-weight: bold;
+    font-size: 12px;
+    position: absolute;
+    right: 6px;
+    bottom: 17px;
+}
+.topbar-input .pop-up{
+    position: absolute;
+    top: 67px;
+    width: 280px;
+    height: 480px;
+    padding: 8px 0;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .1);
+    background-color: #fff;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    visibility: hidden;
+    transition: top .4s;
+    z-index: 9999;
+}
+.topbar-input .pop-up::before{
+    content: '';
+    width: 0px;
+    height: 0px;
+    border: 6px red solid;
+    border-top: none;
+    border-color: transparent transparent #F8F8F8 transparent;
+    position: absolute;
+    top: -6px;
+    left: 140px;
+}
+.topbar-input .pop-up .pop-up-header{
+    width: 280px;
+    height: 48px;
+    line-height: 48px;
+    color: #444;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+}
+.topbar-input .pop-up .pop-up-header span{
+    position: relative;
+    left: 16px;
+}
+.topbar-input .pop-up .pop-up-header span i{
+    margin: 0 10px;
+}
+.topbar-input .pop-up .pop-up-entity{
+    width: 280px;
+    height: 432px;
+}
+.topbar-input .pop-up .pop-up-entity .pop-up-item{
+    text-align: left;
+    width: 244px;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 16px;
+    position: relative;
+}
+.topbar-input .pop-up .pop-up-entity .pop-up-item > span:nth-child(1){
+    display: inline-block;
+    padding: 0 16px;
+    height: 32px;
+    line-height: 32px;
+    background-color: #FAFAFA;
+    color: #1F1F1F;
+    font-size: 14px;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+.topbar-input .pop-up .pop-up-entity .pop-up-item > span:nth-child(1):hover{
+    background-color: #F5F5F5;
+}
+.topbar-input .pop-up .pop-up-entity .pop-up-item > span:nth-child(2){
+    font-size: 12px;
+    position: absolute;
+    right: 30px;
+}
+.topbar-icons{
+    width: 216px;
+}
+.topbar-icons > div{
+    float: left;
+    width: 54px;
+}
+.topbar-icons i{
+    cursor: pointer;
+    font-size: 18px;
+}
+.topbar-icons i:hover{
+    color: #fff;
 }
