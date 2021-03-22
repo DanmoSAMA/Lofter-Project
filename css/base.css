@@ -258,3 +258,6 @@ a{
     content: '\e624';
     font-family:'iconfont';
 }
+.hidden{
+    display: none;
+}

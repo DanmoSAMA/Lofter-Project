@@ -54,16 +54,22 @@ function lazyLoad(){
     let viewHeight = getClient().Height;
     for (let i = num; i < limit; i++) {
         let distance = viewHeight - waterfallItem[i].getBoundingClientRect().top;
-        if (distance >= 0) {  
-            waterfallItem[i].className = "waterfall-item loaded"
+        if (distance >= -100) {  
+            waterfallItem[i].className = "waterfall-item loaded";   
+            //让隐藏的图片显示出来，但这本身并不能实现懒加载的效果
+            waterfallItem[i].getElementsByTagName("img")[1].src =  waterfallItem[i].getElementsByTagName("img")[1].getAttribute('data-src');
+            //这才是懒加载的关键，只要src格式正确，服务器就会去请求对应资源，因此首先把后边的图片的src设置为占位图片的src
+            //当它们要显示时，将src改为要加载的图片的src，即可实现懒加载
+
+            // console.log(trend.style.height);
             setTimeout(function(){
                 waterFall();
-            },10)
+            },16.6)
         }
         num = i + 1;
     }
 }
-function debounce(fn, delay = 500) {
+function debounce(fn, delay = 300) {
     //防抖函数
     let timer = null;
     return function (...args) {
@@ -72,4 +78,22 @@ function debounce(fn, delay = 500) {
         fn.call(this, args);
       }, delay);
     };
+}
+
+//tab栏切换
+const tabArr = document.getElementsByClassName("tab");
+const tabBtnArr = document.getElementsByClassName("header")[0].getElementsByTagName("a");
+const trend = document.getElementsByClassName("trend")[0];
+setInterval(() => {
+    trend.style.height = parseInt(waterfallItem[waterfallItem.length - 1].style.top)
+        + 500 + "px";
+}, 1000);
+
+for(let i = 0; i < tabBtnArr.length; i++){
+    tabBtnArr[i].onclick = function() {
+        for(let j = 0; j < tabBtnArr.length; j++){
+            tabBtnArr[j].className = "";
+        }
+        tabBtnArr[i].className = "chosen_btn";
+    }
 }
