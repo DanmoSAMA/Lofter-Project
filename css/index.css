@@ -73,7 +73,8 @@
 .comment .comment-item{
     width: 674px;
 }
-.comment .comment-item > img{
+.comment .comment-item > img,
+.comment .comment-item a > img{
     float: left;
     margin-right: 47px;
     cursor: pointer;
@@ -81,6 +82,7 @@
 .comment .comment-item .comment-body{
     float: left;
     position: relative;
+    transition: margin-bottom .3s;
 }
 .comment .comment-item .comment-body .triangle{
     width: 560px;
@@ -127,6 +129,7 @@
     width: 500px;
     padding: 3px 32px 28px 28px;
     margin-bottom: 20px;
+    /*当评论消失的时候，恢复该样式*/
     background-color: #fff;
     border: 1px solid #D4D4D5;
     border-top: none;
@@ -174,8 +177,8 @@
 }
 .comment .comment-item .comment-body .comment-content .function-area{
     width: 500px;
-    height: 19px;
     line-height: 19px;
+    height: 19px;
     margin-top: 11px;
     font-size: 12px;
     color: #888;
@@ -194,6 +197,51 @@
 }
 .comment .comment-item .comment-body .comment-content .function-area > i:hover{
     color: #A5B9C9;
+}
+.remark{
+    height: 0;
+    background-color: #FAFAFA;
+    padding: 0 30px 0 30px;
+    border: none; 
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+    margin: -20px 0 20px 0; 
+    transition: padding-top .3s ease, height .3s ease;
+    overflow: hidden;
+}
+.remark.chosen{
+    height: 76px;
+    padding-top: 18px;
+    border: 1px solid #D7D7D9;
+    width: 500px;
+}
+.remark.not-chosen{
+    height: 0;
+    padding-top: 0;
+    border: none;
+    width: 501px;
+}
+.remark input{
+    width: 370px;
+    height: 20px;
+    padding: 9px;
+    outline: none;
+    border: 1px solid #D7D7D9;
+    float: left;
+    margin-bottom: 16px;
+}
+.remark button{
+    float: right;
+    outline: none;
+    border: none;
+    width: 104px;
+    height: 40px;
+    background-color: #82A800;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+.remark button:hover{
+    background-color: #A0C000;
 }
 .sidebar{
     width: 226px;

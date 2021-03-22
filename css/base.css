@@ -223,3 +223,38 @@ a{
 .topbar-icons i:hover{
     color: #fff;
 }
+
+/*user1和user2共用的右上角部分的样式*/
+.control{
+    width: 424px;
+    height: 23px;
+    line-height: 23px;
+    text-align: right;
+    font-size: 12px;
+    position: absolute;
+    right: 20px;
+    top: 7px;
+}
+.control > a{
+    display: inline-block;
+    height: 23px;
+    background-color: #59595A;
+    padding: 0 7px;
+    color: #fff;
+    margin-right: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.control > a:hover{
+    background-color: #484849;
+}
+.control > a:nth-of-type(1):before{
+    content: '\e61a';
+    font-family:'iconfont';
+}
+.control > a:nth-of-type(2):before{
+    content: '\e624';
+    font-family:'iconfont';
+}
