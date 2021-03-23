@@ -261,3 +261,48 @@ a{
 .hidden{
     display: none;
 }
+/*返回顶部*/
+.to-top{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #ADACA9;
+    cursor: pointer;
+    transition: visibility .3s;
+}
+.to-top:hover{
+    background-color: #8B8A86;
+}
+.to-top i{
+    font-size: 28px;
+    color: #EEEEEF;
+    display: inline-block;
+    margin-top: 10px;
+}
+/*底部信息*/
+.footer{
+    width: 928px;
+    height: 68px;
+    padding-bottom: 20px;
+    margin: 30px auto;
+}
+.footer > p{
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+}
+.footer > p > span,
+.footer > p > a{
+    color: #76808B;
+}
+.footer > p:nth-of-type(2) > span,
+.footer > p:nth-of-type(2) > a,
+.footer > p:nth-of-type(3) > a{
+    display: inline-block;
+    margin-right: 6px;
+}
+.footer > p:nth-of-type(3) > a:nth-of-type(1){
+    margin-right: 0;
+}

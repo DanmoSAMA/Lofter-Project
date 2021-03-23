@@ -65,3 +65,44 @@ for (let i = 0; i < rmkBtnArr.length; i++) {
         }
     }
 }
+
+//点击图片放大，再点一次缩小
+const imgArr = document.getElementsByClassName("comment-img");
+let check_zoom = 0;
+for (let i = 0; i < imgArr.length; i++) {
+    imgArr[i].onclick = function () {
+        if(check_zoom === 0){
+            this.style.width = "500px";
+            check_zoom = 1;
+        }
+        else{
+            this.style.width = "164px";
+            check_zoom = 0;
+        }
+    }
+}
+
+//发动态
+const sendBtn = document.getElementsByClassName("send-btn")[0];
+const send = document.getElementsByClassName("send")[0];
+const cancelBtn = document.getElementsByClassName("cancel-btn")[0];
+const myHead = document.getElementsByClassName("my-head")[0];
+const mask = document.getElementsByClassName("mask")[0];
+const pageMask = document.getElementsByClassName("page-mask")[0];
+
+sendBtn.onclick = function() {
+    send.style.height = "477px";
+    myHead.style.width = "64px";
+    myHead.style.height = "64px";
+    mask.style.height = "113px";
+    pageMask.className = "page-mask show";
+}
+cancelBtn.onclick = function() {
+    send.style.height = "0";
+    myHead.style.width = "110px";
+    myHead.style.height = "110px";
+    setTimeout(() => {
+        mask.style.height = "110px";
+        pageMask.className = "page-mask";
+    }, 300);
+}

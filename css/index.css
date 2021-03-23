@@ -1,3 +1,16 @@
+.page-mask{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    position: fixed;
+    opacity: 0;
+    z-index: 0;
+    transition: opacity .2s;
+}
+.page-mask.show{
+    opacity: .75;
+    z-index: 8;
+}
 .main{
     width: 928px;
     margin: 0 auto;
@@ -15,6 +28,7 @@
     background-color: #fff;
     width: 672px;
     box-shadow: 1px 2px 2px rgba(0, 0, 0, .2);
+    position: relative;
 }
 .header > div{
     width: 112px;
@@ -26,10 +40,22 @@
     width: 110px;
     position: relative;
     right: 1px;
+    /* background-color: #EDEDEF; */
 }
 .header-img img{
     width: 110px;
     height: 110px;
+    transition: width .5s ease, height .5s ease, left .5s ease;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+}
+.header-img .mask{
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    top: 0;
+    background-color: #EDEDEF;
 }
 .header-nav{
     position: relative;
@@ -67,6 +93,122 @@
 .header > div:nth-child(6):hover i{
     color: #90AD40;
 }
+.header div.send{
+    cursor: default;
+    position: absolute;
+    width: 565px;
+    height: 0;
+    z-index: 9;
+    left: 109px;
+    background-color: #fff;
+    text-align: left;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .3);
+    transition: height .5s;
+    overflow: hidden;
+}
+.header div.send .send-main{
+    width: 500px;
+    height: 422px;
+    padding: 3px 32px 28px 32px;
+    margin-top: 24px;
+}
+.header div.send .send-main .send-id{
+    width: 500px;
+    height: 25px;
+    line-height: 25px;
+    margin-bottom: 15px;
+    color: #7F7F7F;
+}
+.header div.send .send-main .add-img{
+    width: 500px;
+    height: 312px;
+    border: 1px dotted #DFDFDF;
+    position: relative;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.header div.send .send-main .add-img > div{
+    color: #AAA;
+    width: 100px;
+    height: 80px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    cursor: pointer;
+}
+.header div.send .send-main .add-img > div > i{
+    position: absolute;
+    font-size: 50px;
+    left: 25px
+}
+.header div.send .send-main .add-img > div > span{
+    position: absolute;
+    font-size: 14px;
+    left: 10px;
+    top: 55px;
+}
+.header div.send .send-main .btn-area{
+    width: 500px;
+    height: 36px;
+    line-height: 36px;
+}
+.header div.send .send-main .btn-area > a{
+    float: left;
+    width: 100px;
+    height: 36px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    background-color: #E6E6E6;
+    text-align: center;
+    color: #8C8C8C;
+}
+.header div.send .send-main .btn-area > a:nth-of-type(1){
+    margin-right: 130px;
+}
+.header div.send .send-main .btn-area > a:nth-of-type(1):hover{
+    background-color: #F2F2F2;
+}
+.header div.send .send-main .btn-area > a:nth-of-type(2){
+    margin-right: 20px;
+}
+.header div.send .send-main .btn-area > a:nth-of-type(2):hover{
+    background-color: #F2F2F2;
+}
+.header div.send .send-main .btn-area > a:nth-of-type(3){
+    background-color: #82A800;
+    color: #FEFEFE;
+    width: 150px;
+    height: 36px;
+    position: relative;
+}
+.header div.send .send-main .btn-area > a:nth-of-type(3) > span{
+    height: 36px;
+    width: 109px;
+    position: absolute;
+    left: 0;
+    border-right: 1px solid #759900;
+}
+.header div.send .send-main .btn-area > a:nth-of-type(3) > span:hover{
+    background-color: #A3D200;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.header div.send .send-main .btn-area > a:nth-of-type(3) > i{
+    display: inline-block;
+    position: absolute;
+    width: 39px;
+    height: 36px;
+    left: 110px;
+    border-left: 1px solid #A5BF47;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.header div.send .send-main .btn-area > a:nth-of-type(3) > i:hover{
+    background-color: #A3D200;
+}
 .comment{
     width: 674px;
 }
@@ -84,7 +226,7 @@
     position: relative;
     transition: margin-bottom .3s;
 }
-.comment .comment-item .comment-body .triangle{
+.triangle{
     width: 560px;
     height: 24px;
     background-color: #fff;
@@ -93,7 +235,7 @@
     border-bottom: none;
     border-top: none;
 }
-.comment .comment-item .comment-body .triangle::before{
+.triangle::before{
     content: '';
     width: 0px;
     height: 0px;
@@ -106,7 +248,7 @@
     transform: rotate(45deg);
     box-shadow: 1.5px 2px 2px rgba(0, 0, 0, .2);
 }
-.comment .comment-item .comment-body .triangle::after{
+.triangle::after{
     /*负责遮住多余的阴影*/
     content: '';
     width: 17px;
@@ -561,23 +703,4 @@
     top: 45px;
     right: 11px;
     color: #999;
-}
-.to-top{
-    width: 50px;
-    height: 50px;
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: #ADACA9;
-    cursor: pointer;
-    transition: visibility .3s;
-}
-.to-top:hover{
-    background-color: #8B8A86;
-}
-.to-top i{
-    font-size: 28px;
-    color: #EEEEEF;
-    display: inline-block;
-    margin-top: 10px;
 }
