@@ -1,0 +1,99 @@
+.comment-area{
+    border-bottom: 2px dotted #DBDBDB;
+}
+.add-comment{
+    width: 530px;
+    padding-bottom: 70px;
+    margin-top: 32px;
+    border-bottom: 2px dotted #DBDBDB;
+}
+h3{
+    font-size: 14px;
+    font-weight: bold;
+    color: #939393;
+    height: 20px;
+    line-height: 20px;
+    padding-bottom: 10px;
+}
+.add-comment > textarea{
+    width: 518.4px;
+    height: 130px;
+    outline: none;
+    padding: 3px 5px;
+    border: 1px solid #DDD;
+    direction: ltr;
+    margin-bottom: 10px;
+}
+.add-comment > span{
+    cursor: pointer;
+    float: right;
+    width: 78px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 13.6px;
+    color: #FEFEFE;
+    background-color: #777;
+    text-align: center;
+}
+.heat{
+    width: 530px;
+    margin-top: 32px;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    border-bottom: 2px dotted #DBDBDB;
+}
+.heat-item{
+    width: 530px;
+    height: 20px;
+    line-height: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid #DDDDDD;
+    font-size: 12px;
+}
+.heat-item > img{
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+}
+.heat-item > a{
+    color: #838D95;
+}
+.heat-item > span{
+    color: #737373;
+}
+.prev-next{
+    width: 530px;
+    height: 40px;
+    padding-bottom: 10px;
+}
+.prev-next > a{
+    height: 40px;
+    width: 40px;
+    background-color: #838D95;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: width .5s, padding-left .5s;
+}
+.prev-next > a > span{
+    width: 50px;
+    padding-left: 20px;
+    height: 40px;
+    line-height: 40px;
+    color: #FEFEFE;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+}
+.prev-next > a > i{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #FEFEFE;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+}
