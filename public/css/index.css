@@ -135,7 +135,6 @@
     border: 1px dotted #DFDFDF;
     position: relative;
     margin-bottom: 30px;
-    cursor: pointer;
     outline: none;
     padding: 8px;
     resize: none;   /*textarea禁止拉伸*/
@@ -167,7 +166,8 @@
     height: 36px;
     line-height: 36px;
 }
-.header div.send .send-main .btn-area > a{
+.header div.send .send-main .btn-area > a,
+.header div.send .send-main .btn-area > button{
     float: left;
     width: 100px;
     height: 36px;
@@ -178,6 +178,18 @@
     background-color: #E6E6E6;
     text-align: center;
     color: #8C8C8C;
+
+}
+.header div.send .send-main .btn-area > button{
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0;
+  width: 150px;
+  background-color: #82A800;
+  color: #fff;
+  position: relative;
 }
 .header div.send .send-main .btn-area > a:nth-of-type(1){
     margin-right: 130px;
@@ -191,36 +203,33 @@
 .header div.send .send-main .btn-area > a:nth-of-type(2):hover{
     background-color: #F2F2F2;
 }
-.header div.send .send-main .btn-area > a:nth-of-type(3){
-    background-color: #82A800;
-    color: #FEFEFE;
-    width: 150px;
-    height: 36px;
-    position: relative;
+.header div.send .send-main .btn-area > button > span{
+  height: 36px;
+  line-height: 36px;
+  width: 109px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-right: 1px solid #759900;
 }
-.header div.send .send-main .btn-area > a:nth-of-type(3) > span{
-    height: 36px;
-    width: 109px;
-    position: absolute;
-    left: 0;
-    border-right: 1px solid #759900;
+.header div.send .send-main .btn-area > button > i{
+  position: absolute;
+  width: 39px;
+  height: 36px;
+  line-height: 36px;
+  left: 110px;
+  top: 0;
+  border-left: 1px solid #A5BF47;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
-.header div.send .send-main .btn-area > a:nth-of-type(3) > span:hover{
+
+.header div.send .send-main .btn-area > button > span:hover{
     background-color: #A3D200;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
 }
-.header div.send .send-main .btn-area > a:nth-of-type(3) > i{
-    display: inline-block;
-    position: absolute;
-    width: 39px;
-    height: 36px;
-    left: 110px;
-    border-left: 1px solid #A5BF47;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-}
-.header div.send .send-main .btn-area > a:nth-of-type(3) > i:hover{
+.header div.send .send-main .btn-area > button > i:hover{
     background-color: #A3D200;
 }
 .comment{
@@ -234,6 +243,8 @@
     float: left;
     margin-right: 47px;
     cursor: pointer;
+    width: 64px;
+    height: 64px;
 }
 .comment .comment-item .comment-body{
     float: left;
