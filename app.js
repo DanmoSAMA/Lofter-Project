@@ -6,12 +6,60 @@ http
         let parseObj = url.parse(req.url, true);
         let pathname = parseObj.pathname;
         if(pathname === '/') {
-            fs.readFile('./public/index.html', function (err, data) {
+            fs.readFile('./views/index.html', function (err, data) {
                 if(err) {
                     return res.end('404 Not Found.')
                 }
-                res.end(data.toString());
+                res.end(data);
             });
+        }
+        else if(pathname === '/found') {
+            fs.readFile('./views/found.html', function (err, data) {
+                if (err) {
+                  return res.end('404 Not Found.')
+                }
+                res.end(data)
+              });
+        } 
+        else if(pathname === '/user_1') {
+            fs.readFile('./views/user_1.html', function (err, data) {
+                if(err) {
+                    return res.end('404 Not Found.')
+                }
+                res.end(data);
+            });
+        }
+        else if(pathname === '/user_2') {
+            fs.readFile('./views/user_2.html', function (err, data) {
+                if(err) {
+                    return res.end('404 Not Found.')
+                }
+                res.end(data);
+            });
+        }
+        else if(pathname === '/user1_artical1') {
+            fs.readFile('./views/user1_artical1.html', function (err, data) {
+                if(err) {
+                    return res.end('404 Not Found.')
+                }
+                res.end(data);
+            });
+        }
+        else if(pathname === '/user1_artical2') {
+            fs.readFile('./views/user1_artical2.html', function (err, data) {
+                if(err) {
+                    return res.end('404 Not Found.')
+                }
+                res.end(data);
+            });
+        }
+        else if(pathname.indexOf('/public/') === 0) {
+            fs.readFile('.' + pathname, function (err, data) {
+                if (err) {
+                  return res.end('404 Not Found.')
+                }
+                res.end(data)
+              })
         }
     })
     .listen(3000, function () {

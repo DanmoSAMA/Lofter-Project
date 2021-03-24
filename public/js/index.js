@@ -91,7 +91,7 @@ const mask = document.getElementsByClassName("mask")[0];
 const pageMask = document.getElementsByClassName("page-mask")[0];
 
 sendBtn.onclick = function() {
-    send.style.height = "477px";
+    send.style.height = "515px";
     myHead.style.width = "64px";
     myHead.style.height = "64px";
     mask.style.height = "113px";

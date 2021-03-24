@@ -119,15 +119,29 @@
     margin-bottom: 15px;
     color: #7F7F7F;
 }
-.header div.send .send-main .add-img{
-    width: 500px;
-    height: 312px;
+.header div.send .send-main input{
+    width: 488px;
+    padding: 8px;
+    height: 16px;
+    line-height: 16px;
+    outline: none;
+    border: 1px dotted #DFDFDF;
+    border-bottom: none;
+    font-size: 14px;
+}
+.header div.send .send-main .add-text{
+    width: 488px;
+    height: 300px;
     border: 1px dotted #DFDFDF;
     position: relative;
     margin-bottom: 30px;
     cursor: pointer;
+    outline: none;
+    padding: 8px;
+    resize: none;   /*textarea禁止拉伸*/
+    font-size: 14px;
 }
-.header div.send .send-main .add-img > div{
+.header div.send .send-main .add-text > div{
     color: #AAA;
     width: 100px;
     height: 80px;
@@ -137,12 +151,12 @@
     transform: translateX(-50%) translateY(-50%);
     cursor: pointer;
 }
-.header div.send .send-main .add-img > div > i{
+.header div.send .send-main .add-text > div > i{
     position: absolute;
     font-size: 50px;
     left: 25px
 }
-.header div.send .send-main .add-img > div > span{
+.header div.send .send-main .add-text > div > span{
     position: absolute;
     font-size: 14px;
     left: 10px;
