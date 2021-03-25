@@ -6,6 +6,76 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "429498",
+      "name": "微博",
+      "font_class": "logo-weibo",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "1002158",
+      "name": "QQ",
+      "font_class": "qq",
+      "unicode": "e6b4",
+      "unicode_decimal": 59060
+    },
+    {
+      "icon_id": "1613593",
+      "name": "邮箱",
+      "font_class": "youxiang",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "19488528",
+      "name": "微信",
+      "font_class": "weixin1x",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "1130595",
+      "name": "个人",
+      "font_class": "geren",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "2678663",
+      "name": "注销",
+      "font_class": "zhuxiao",
+      "unicode": "e66d",
+      "unicode_decimal": 58989
+    },
+    {
+      "icon_id": "5649801",
+      "name": "手机",
+      "font_class": "shouji",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "7450602",
+      "name": "导入",
+      "font_class": "daoru",
+      "unicode": "e65d",
+      "unicode_decimal": 58973
+    },
+    {
+      "icon_id": "15821679",
+      "name": "添加好友",
+      "font_class": "tianjiahaoyou",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "19657957",
+      "name": "帮 助",
+      "font_class": "help",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
       "icon_id": "15668908",
       "name": "向左",
       "font_class": "xiangzuo",

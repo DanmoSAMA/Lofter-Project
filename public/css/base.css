@@ -223,7 +223,55 @@ a{
 .topbar-icons i:hover{
     color: #fff;
 }
-
+.login-pop-btn{
+  position: relative;
+}
+.login-pop{
+  position: absolute;
+  width: 264px;
+  padding: 8px 0;
+  background-color: #1F1F1F;
+  top: 60px;
+  left: -105px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  visibility: hidden;
+  opacity: 0;
+  transition: .5s height, .5s opacity, .5s top;
+}
+.login-pop::before{
+  content: '';
+  width: 0px;
+  height: 0px;
+  border: 8px #1f1f1f solid;
+  border-top: none;
+  border-color: transparent transparent #1f1f1f transparent;
+  position: absolute;
+  top: -6px;
+  left: 124px;
+}
+.login-pop > li{
+  font-size: 14px;
+  color: #fff;
+  height: 48px;
+  line-height: 48px;
+  padding-left: 24px;
+  text-align: left;
+  cursor: pointer;
+  transition:  background-color .2s;
+}
+.login-pop > li:hover{
+  background-color: #393939;
+}
+.login-pop > li > i{
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.login-pop > li > a{
+  color: #fff;
+}
 /*user1和user2共用的右上角部分的样式*/
 .control{
     width: 424px;

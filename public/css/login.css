@@ -1,0 +1,153 @@
+body{
+  background-image: url(../img/login01.jpg);
+  background-size: cover;
+}
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #999;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #999;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #999;
+  font-size: 14px;
+  font-weight: normal;
+}
+.logo-img{
+  width: 177px;
+  height: 64px;
+  margin: 40px auto 30px auto;
+}
+.login-area{
+  width: 336px;
+  height: 454px;
+  padding: 24px 32px 0 32px;
+  background-color: #fff;
+  border-radius: 3%;
+  margin: auto;
+}
+.login-area > h1{
+  width: 336px;
+  height: 49px;
+  line-height: 49px;
+  border-bottom: 1px solid #EDEDED;
+  text-align: left;
+}
+.login-area > h1 > a{
+  font-weight: bold;
+  color: #1F1F1F;
+}
+.login-area > form{
+  width: 336px;
+  height: 255px;
+  padding-top: 24px;
+  text-align: left;
+}
+.login-area > form > input{
+  width: 286px;
+  height: 46px;
+  padding: 0 24px;
+  margin-bottom: 15px;
+  outline: none;
+  border: 1px solid #EDEDED;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+}
+.login-area > form > input:focus{
+  border-color: #85C8BD;
+}
+.login-area > form > button{
+  width: 336px;
+  height: 46px;
+  padding: 0 10px;
+  background-color: #48C3BC;
+  outline: none;
+  border: none;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+  font-size: 18px;
+  color: #FEFEFE;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .3s background-color;
+  margin-bottom: 15px;
+}
+.login-area > form > button:hover{
+  background-color: #80C5CA;
+}
+.login-area > form > .check{
+  height: 16px;
+  line-height: 16px;
+}
+.login-area > form > .check > input{
+  vertical-align: middle;
+}
+.login-area > form > .check > span{
+  font-size: 13px;
+  color: #999;
+}
+.login-area > form > .check > span > a{
+  color: #48C3BC;
+}
+.login-area .get-back{
+  width: 336px;
+  height: 25px;
+  line-height: 25px;
+  text-align: left;
+  font-size: 12px;
+  border-bottom: 1px solid #EDEDED;
+}
+.login-area .get-back > a:hover{
+  color: #97D5C9;
+}
+.login-area .get-back > a:nth-of-type(1){
+  float: left;
+}
+.login-area .get-back > a:nth-of-type(2){
+  float: right;
+}
+.login-area .ways-to-login{
+  width: 336px;
+  height: 20px;
+  padding-top: 24px;
+  font-size: 13px;
+}
+.login-area .ways-to-login > a{
+  float: left;
+  width: 68px;
+  padding-left: 16px;
+}
+.login-area .ways-to-login > a > i{
+  font-size: 18px;
+  vertical-align: middle;
+}
+.login-area .ways-to-login > a:nth-of-type(1) > i{
+  color: #F9B8D0;
+}
+.login-area .ways-to-login > a:nth-of-type(2) > i{
+  color: #F45568;
+}
+.login-area .ways-to-login > a:nth-of-type(3) > i{
+  color: #44B4FE;
+}
+.login-area .ways-to-login > a:nth-of-type(4) > i{
+  color: #5CE893;
+}
+.footer > p > span,
+.footer > p > a{
+  color: #CECFCE;
+}
+

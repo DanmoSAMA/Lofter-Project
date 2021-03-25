@@ -106,3 +106,30 @@ cancelBtn.onclick = function () {
     pageMask.className = "page-mask";
   }, 300);
 }
+
+//登录框
+const lgPopBtn = document.getElementsByClassName("login-pop-btn")[0];
+const lgPop = document.getElementsByClassName("login-pop")[0];
+
+lgPopBtn.onclick = function () {
+  lgPop.style.visibility = "visible";
+  lgPop.style.opacity = "1";
+  lgPop.style.top = "75px";
+  document.addEventListener("click", function(event) {
+    //点击区域外的空白，就关闭弹出框
+    let cDom = lgPop;
+    let tDom = event.target;
+    if (cDom === tDom || cDom.contains(tDom) || tDom === lgPopBtn || tDom === document.querySelector(".login-pop-btn > i")) {
+      cDom.style.visibility = "visible";
+    } else {
+      cDom.style.visibility = "hidden";
+      cDom.style.opacity = "0";
+      cDom.style.top = "65px";
+    }
+  });
+};
+
+
+
+
+
