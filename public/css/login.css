@@ -1,5 +1,5 @@
 body{
-  background-image: url(../img/login01.jpg);
+  background-image: url(/public/img/login01.jpg);
   background-size: cover;
 }
 ::-webkit-input-placeholder {
@@ -101,6 +101,29 @@ body{
 }
 .login-area > form > .check > span > a{
   color: #48C3BC;
+}
+.login-area > form > .not-checked{
+  position: fixed;
+  width: 260px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #000;
+  padding: 0 10px;
+  border-radius: 20px;
+  left: 0;
+  right: 0;
+  top: 45%;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s;
+}
+.login-area > form > .not-checked.touched{
+  opacity: 1;
+  visibility: visible;
 }
 .login-area .get-back{
   width: 336px;
