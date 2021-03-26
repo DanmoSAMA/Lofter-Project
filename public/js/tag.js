@@ -15,21 +15,6 @@ toTop.onclick = function () {
   document.documentElement.scrollTop = 0;
 }
 
-// 侧边栏
-const user = document.getElementsByClassName("user")[1];
-const creatorCenter = document.getElementsByClassName("creator-center")[1];
-let timer_sideBar = setInterval(() => {
-  scrollTop = parseInt(document.documentElement.scrollTop);
-  if (scrollTop > 1700) {
-    user.style.display = "block";
-    creatorCenter.style.display = "block";
-  }
-  else {
-    user.style.display = "none";
-    creatorCenter.style.display = "none";
-  }
-}, 100);
-
 // 点击喜欢心变红，再点击变灰
 const HeartArr = document.getElementsByClassName("icon_heart");
 let check_heart = 0;
@@ -40,7 +25,7 @@ for (let i = 0; i < HeartArr.length; i++) {
       check_heart = 1;
     }
     else {
-      this.style.color = "#888";
+      this.style.color = "#888"
       check_heart = 0;
     }
   }
@@ -82,31 +67,6 @@ for (let i = 0; i < imgArr.length; i++) {
   }
 }
 
-//发动态
-const sendBtn = document.getElementsByClassName("send-btn")[0];
-const send = document.getElementsByClassName("send")[0];
-const cancelBtn = document.getElementsByClassName("cancel-btn")[0];
-const myHead = document.getElementsByClassName("my-head")[0];
-const mask = document.getElementsByClassName("mask")[0];
-const pageMask = document.getElementsByClassName("page-mask")[0];
-
-sendBtn.onclick = function () {
-  send.style.height = "515px";
-  myHead.style.width = "64px";
-  myHead.style.height = "64px";
-  mask.style.height = "113px";
-  pageMask.className = "page-mask show";
-}
-cancelBtn.onclick = function () {
-  send.style.height = "0";
-  myHead.style.width = "110px";
-  myHead.style.height = "110px";
-  setTimeout(() => {
-    mask.style.height = "110px";
-    pageMask.className = "page-mask";
-  }, 300);
-}
-
 //登录框
 const lgPopBtn = document.getElementsByClassName("login-pop-btn")[0];
 const lgPop = document.getElementsByClassName("login-pop")[0];
@@ -115,7 +75,7 @@ lgPopBtn.onclick = function () {
   lgPop.style.visibility = "visible";
   lgPop.style.opacity = "1";
   lgPop.style.top = "75px";
-  document.addEventListener("click", function (event) {
+  document.addEventListener("click", function(event) {
     //点击区域外的空白，就关闭弹出框
     let cDom = lgPop;
     let tDom = event.target;
@@ -156,3 +116,8 @@ for (let i = 0; i < tagArr.length; i++) {
     tagInput.value = temp;
   }
 }
+
+
+
+
+

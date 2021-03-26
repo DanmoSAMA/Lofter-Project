@@ -167,7 +167,7 @@ http
         function (err, data) {
           if (!err) {
             if (data !== null) {
-            //如果找到这个id，判断密码是否正确，正确则跳转到主页
+              //如果找到这个id，判断密码是否正确，正确则跳转到主页
               if (data.password !== _login.password) {
                 console.log('密码错误');
               }
@@ -200,7 +200,7 @@ http
                   }
                 });
               */
-             
+
               LgModel.create({
                 id: _login.id,
                 password: _login.password
@@ -213,6 +213,35 @@ http
             }
           }
         })
+    }
+    else if (pathname === '/tag') {
+      let _tag = parseObj.query;
+      if (_tag.tag === '逆转裁判') {
+        res.statusCode = 302;
+        res.setHeader('Location', '/tag1');
+        res.end();
+      }
+      else if (_tag.tag === '天元突破') {
+        res.statusCode = 302;
+        res.setHeader('Location', '/tag2');
+        res.end();
+      }
+    }
+    else if (pathname === '/tag1') {
+      fs.readFile('./views/tag1.html', function (err, data) {
+        if (err) {
+          return res.end('404 Not Found.')
+        }
+        res.end(data);
+      });
+    }
+    else if (pathname === '/tag2') {
+      fs.readFile('./views/tag2.html', function (err, data) {
+        if (err) {
+          return res.end('404 Not Found.')
+        }
+        res.end(data);
+      });
     }
     else {
       return res.end('404 Not Found.');

@@ -29,8 +29,8 @@
           <a href="javascript:;">APP</a>
         </div>
       </div>
-      <div class="topbar-input">
-        <input type="text" placeholder="搜索用户、标签">
+      <form class="topbar-input" action="/tag">
+        <input type="text" placeholder="搜索用户、标签" name="tag" autocomplete="off">
         <i class="iconfont">&#xe62d;</i>
         <span>NEW</span>
         <div class="pop-up">
@@ -42,7 +42,7 @@
           </div>
           <div class="pop-up-entity">
             <div class="pop-up-item">
-              <span>
+              <span class="tag">
                 #戈多
               </span>
               <span>
@@ -50,7 +50,7 @@
               </span>
             </div>
             <div class="pop-up-item">
-              <span>
+              <span class="tag">
                 #戈德
               </span>
               <span>
@@ -58,7 +58,7 @@
               </span>
             </div>
             <div class="pop-up-item">
-              <span>
+              <span class="tag">
                 #神乃木庄龙
               </span>
               <span>
@@ -66,7 +66,7 @@
               </span>
             </div>
             <div class="pop-up-item">
-              <span>
+              <span class="tag">
                 #游戏
               </span>
               <span>
@@ -74,16 +74,32 @@
               </span>
             </div>
             <div class="pop-up-item">
-              <span>
+              <span class="tag">
                 #二次元
               </span>
               <span>
                 +48666篇
               </span>
             </div>
+            <div class="pop-up-item">
+              <span class="tag">
+                #逆转裁判
+              </span>
+              <span>
+                +951篇
+              </span>
+            </div>
+            <div class="pop-up-item">
+              <span class="tag">
+                #天元突破
+              </span>
+              <span>
+                +23篇
+              </span>
+            </div>
           </div>
         </div>
-      </div>
+      </form>
       <div class="topbar-icons">
         <div>
           <i class="iconfont">&#xe60a;</i>
@@ -94,11 +110,39 @@
         <div>
           <i class="iconfont">&#xe60c;</i>
         </div>
-        <div>
+        <div class="login-pop-btn">
           <i class="iconfont">&#xe629;</i>
+          <ul class="login-pop">
+            <li>
+              <i class="iconfont">&#xe60f;</i>
+              <span>寻找好友</span>
+            </li>
+            <li>
+              <i class="iconfont">&#xe65d;</i>
+              <span>导入</span>
+            </li>
+            <li>
+              <i class="iconfont">&#xe600;</i>
+              <span>移动客户端</span>
+            </li>
+            <li>
+              <i class="iconfont">&#xe611;</i>
+              <span>UAPP-创建个人应用</span>
+            </li>
+            <li>
+              <i class="iconfont">&#xe626;</i>
+              <span>帮助中心：0571-89852053</span>
+            </li>
+            <a href="/login">
+              <li>
+                <i class="iconfont">&#xe66d;</i>
+                <span>登录</span>
+              </li>
+            </a>
         </div>
       </div>
     </div>
+  </div>
   </div>
   <div class="header-wrapper">
     <div class="header w">

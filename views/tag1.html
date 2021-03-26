@@ -4,16 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lofter（乐乎） - 让兴趣、更有趣</title>
+  <title>逆转裁判 | Lofter（乐乎） - 让兴趣、更有趣</title>
   <link rel="stylesheet" href="/public/css/base.css">
   <link rel="stylesheet" href="/public/css/reset.css">
   <link rel="stylesheet" href="/public/css/index.css">
+  <link rel="stylesheet" href="/public/css/tag.css">
   <link rel="stylesheet" href="/public/icon-font/iconfont.css">
   <link rel="icon" href="/public/favicon.ico">
 </head>
 
 <body>
-  <div class="page-mask"></div>
   <div class="topbar-wrapper">
     <div class="topbar w">
       <div class="topbar-img">
@@ -147,126 +147,25 @@
   </div>
   <div class="main clearfix">
     <div class="middle">
-      <div class="header">
-        <div class="header-img">
-          <a href="/user_1">
-            <img src="/public/img/user_head1.jpg" class="my-head">
-          </a>
-          <div class="mask"></div>
-        </div>
-        <div class="header-nav send-btn">
-          <i class="iconfont">&#xe615;</i>
-          <span>文字</span>
-        </div>
-        <div class="header-nav">
-          <i class="iconfont">&#xe62b;</i>
-          <span>图片</span>
-        </div>
-        <div class="header-nav">
-          <i class="iconfont">&#xe888;</i>
-          <span>音乐</span>
-        </div>
-        <div class="header-nav">
-          <i class="iconfont">&#xe607;</i>
-          <span>视频</span>
-        </div>
-        <div class="header-nav">
-          <i class="iconfont">&#xe609;</i>
-          <span>长文章</span>
-        </div>
-        <div class="send">
-          <div class="send-main">
-            <p class="send-id">
-              Danmoits
-            </p>
-            <form action="/dynamic" method="get">
-              <input type="text" placeholder="标题(可不填)" name="title">
-              <textarea name="message" class="add-text" required minlength="1"></textarea>
-              <div class="btn-area">
-                <a href="javascript:;" class="cancel-btn">取&nbsp;&nbsp;&nbsp;消</a>
-                <a href="javascript:;">预&nbsp;&nbsp;&nbsp;览</a>
-                <button type="submit">
-                  <span>发&nbsp;&nbsp;&nbsp;布</span>
-                  <i class="iconfont">&#xe72f;</i>
-                </button>
-              </div>
+      <div class="middle-top">
+        <div class="tag-name">
+          <h1>
+            <i class="iconfont">&#xeba0;</i>
+            <span>逆转裁判</span>
+            <a href="javascript:;">+ 订阅</a>
+          </h1>
+          <div>
+            <a href="javascript:;">参与话题</a>
+            <span>212.8万浏览</span>
+            <span>13884参与</span>
           </div>
-          </form>
-          <!-- 
-                <div class="add-text">
-                    <div>
-                        <i class="iconfont">&#xe62b;</i>
-                        <span>添加一张图片</span>
-                    </div>
-                </div> 
-            -->
+        </div>
+        <div class="new-hot">
+          <a href="javascript:;">最新</a>
+          <a href="javascript:;">最热</a>
         </div>
       </div>
       <div class="comment">
-        {{each comments}}
-        <div class="comment-item clearfix">
-          <img src="/public/img/user_head1.jpg">
-          <div class="comment-body">
-            <div class="triangle"></div>
-            <div class="line"></div>
-            <div class="comment-content clearfix">
-              <span>Danmoits</span>
-              <div class="comment-content-inner">
-                <img src="/public/img/topic15.jpg" class="comment-img">
-                <h5>{{ $value.title }}</h5>
-                <p>{{ $value.message }}</p>
-              </div>
-              <span class="fold">
-                展开
-                <i class="iconfont">&#xe72f;</i>
-              </span>
-              <div class="function-area">
-                <i class="iconfont icon_heart">&#xe619;</i>
-                <span>推荐</span>
-                <span>分享</span>
-                <span class="remark-btn">评论（65）</span>
-                <span>热度（493）</span>
-              </div>
-            </div>
-            <div class="remark not-chosen">
-              <input type="text">
-              <button>发&nbsp;&nbsp;&nbsp;&nbsp;布</button>
-            </div>
-          </div>
-        </div>
-        {{/each}}
-        <div class="comment-item clearfix">
-          <img src="/public/img/head1.jpg">
-          <div class="comment-body">
-            <div class="triangle"></div>
-            <div class="line"></div>
-            <div class="comment-content clearfix">
-              <span>LOFTER话题君</span>
-              <div class="comment-content-inner">
-                <img src="/public/img/comment1.jpg" class="comment-img">
-                <h5>LOFTER创作者激励计划“不负有勤人”获奖公布</h5>
-                <p>1、以下创作者在“超潜力新星”赛道中获评为优质创作者</p>
-                <u> @莫得蓝颜色 @咒高第一干饭人 @叫我三岁就好了 @吱枝七 @E.S.P @亦贝paradox @零度杀戮 @宋辞柒 ...</u>
-              </div>
-              <span class="fold">
-                展开
-                <i class="iconfont">&#xe72f;</i>
-              </span>
-              <div class="function-area">
-                <i class="iconfont icon_heart">&#xe619;</i>
-                <span>推荐</span>
-                <span>分享</span>
-                <span class="remark-btn">评论（65）</span>
-                <span>热度（493）</span>
-              </div>
-            </div>
-            <div class="remark not-chosen">
-              <input type="text">
-              <button>发&nbsp;&nbsp;&nbsp;&nbsp;布</button>
-            </div>
-          </div>
-        </div>
-
         <div class="comment-item clearfix">
           <a href="/user_2">
             <img src="/public/img/head2.jpg">
@@ -275,12 +174,22 @@
             <div class="triangle"></div>
             <div class="line"></div>
             <div class="comment-content clearfix">
-              <span>LOFTER话题君</span>
+              <span>游戏菌</span>
               <div class="comment-content-inner">
                 <img src="/public/img/comment2.jpg" class="comment-img">
-                <h5>←点击左侧头像进入个人主页</h5>
-                <p>1、以下创作者在“超潜力新星”赛道中获评为优质创作者</p>
-                <u> @莫得蓝颜色 @咒高第一干饭人 @叫我三岁就好了 @吱枝七 @E.S.P @亦贝paradox @零度杀戮 @宋辞柒 ...</u>
+                <h5>【斯莉X逆转裁判】手捧百合花的逆转4</h5>
+                <p>1980年10月31日上午11时16分地方法院被告第2休息室
+
+                  斯内普打开休息室大门的时候，里克正挽着莉莉的手走进来。男孩望着莉莉说：“姐姐，你看见莱了是吗？你也看见了……那个杀了她的人？”
+
+                  莉莉微笑，百合的清幽从中绽放：“姐姐也只看到了这一幕而已，事实的真相，你的辩护人哥哥会帮你找出来。”说着，她拍拍里克，向斯内普走过来。
+
+                  “律师的制服很适合你，西弗。”莉莉笑着说。她手抚上斯内普的脖颈，满眼都是温柔的爱意。
+
+                  斯内普的目光则很严肃：“你不是应该在魔法世界——”
+
+                  莉莉似乎还想叙旧，她打断道：“我还记得，那棵树下，你说虽然自己没有魔法，但也要用自己的力量保护弱小的人，你做到了。在法庭战斗的...</p>
+
               </div>
               <span class="fold">
                 展开
@@ -306,12 +215,22 @@
             <div class="triangle"></div>
             <div class="line"></div>
             <div class="comment-content clearfix">
-              <span>LOFTER话题君</span>
+              <span>触手研究专家</span>
               <div class="comment-content-inner">
                 <img src="/public/img/comment3.jpg" class="comment-img">
-                <h5>LOFTER创作者激励计划“不负有勤人”获奖公布</h5>
-                <p>1、以下创作者在“超潜力新星”赛道中获评为优质创作者</p>
-                <u> @莫得蓝颜色 @咒高第一干饭人 @叫我三岁就好了 @吱枝七 @E.S.P @亦贝paradox @零度杀戮 @宋辞柒 ...</u>
+                <h5>【斯莉X逆转裁判】手捧百合花的逆转4</h5>
+                <p>1980年10月31日上午11时16分地方法院被告第2休息室
+
+                  斯内普打开休息室大门的时候，里克正挽着莉莉的手走进来。男孩望着莉莉说：“姐姐，你看见莱了是吗？你也看见了……那个杀了她的人？”
+
+                  莉莉微笑，百合的清幽从中绽放：“姐姐也只看到了这一幕而已，事实的真相，你的辩护人哥哥会帮你找出来。”说着，她拍拍里克，向斯内普走过来。
+
+                  “律师的制服很适合你，西弗。”莉莉笑着说。她手抚上斯内普的脖颈，满眼都是温柔的爱意。
+
+                  斯内普的目光则很严肃：“你不是应该在魔法世界——”
+
+                  莉莉似乎还想叙旧，她打断道：“我还记得，那棵树下，你说虽然自己没有魔法，但也要用自己的力量保护弱小的人，你做到了。在法庭战斗的...</p>
+
               </div>
               <span class="fold">
                 展开
@@ -337,12 +256,22 @@
             <div class="triangle"></div>
             <div class="line"></div>
             <div class="comment-content clearfix">
-              <span>LOFTER话题君</span>
+              <span>触手研究专家</span>
               <div class="comment-content-inner">
                 <img src="/public/img/comment4.jpg" class="comment-img">
-                <h5>LOFTER创作者激励计划“不负有勤人”获奖公布</h5>
-                <p>1、以下创作者在“超潜力新星”赛道中获评为优质创作者</p>
-                <u> @莫得蓝颜色 @咒高第一干饭人 @叫我三岁就好了 @吱枝七 @E.S.P @亦贝paradox @零度杀戮 @宋辞柒 ...</u>
+                <h5>【斯莉X逆转裁判】手捧百合花的逆转4</h5>
+                <p>1980年10月31日上午11时16分地方法院被告第2休息室
+
+                  斯内普打开休息室大门的时候，里克正挽着莉莉的手走进来。男孩望着莉莉说：“姐姐，你看见莱了是吗？你也看见了……那个杀了她的人？”
+
+                  莉莉微笑，百合的清幽从中绽放：“姐姐也只看到了这一幕而已，事实的真相，你的辩护人哥哥会帮你找出来。”说着，她拍拍里克，向斯内普走过来。
+
+                  “律师的制服很适合你，西弗。”莉莉笑着说。她手抚上斯内普的脖颈，满眼都是温柔的爱意。
+
+                  斯内普的目光则很严肃：“你不是应该在魔法世界——”
+
+                  莉莉似乎还想叙旧，她打断道：“我还记得，那棵树下，你说虽然自己没有魔法，但也要用自己的力量保护弱小的人，你做到了。在法庭战斗的...</p>
+
               </div>
               <span class="fold">
                 展开
@@ -368,12 +297,22 @@
             <div class="triangle"></div>
             <div class="line"></div>
             <div class="comment-content clearfix">
-              <span>LOFTER话题君</span>
+              <span>触手研究专家</span>
               <div class="comment-content-inner">
                 <img src="/public/img/comment5.jpg" class="comment-img">
-                <h5>LOFTER创作者激励计划“不负有勤人”获奖公布</h5>
-                <p>1、以下创作者在“超潜力新星”赛道中获评为优质创作者</p>
-                <u> @莫得蓝颜色 @咒高第一干饭人 @叫我三岁就好了 @吱枝七 @E.S.P @亦贝paradox @零度杀戮 @宋辞柒 ...</u>
+                <h5>【斯莉X逆转裁判】手捧百合花的逆转4</h5>
+                <p>1980年10月31日上午11时16分地方法院被告第2休息室
+
+                  斯内普打开休息室大门的时候，里克正挽着莉莉的手走进来。男孩望着莉莉说：“姐姐，你看见莱了是吗？你也看见了……那个杀了她的人？”
+
+                  莉莉微笑，百合的清幽从中绽放：“姐姐也只看到了这一幕而已，事实的真相，你的辩护人哥哥会帮你找出来。”说着，她拍拍里克，向斯内普走过来。
+
+                  “律师的制服很适合你，西弗。”莉莉笑着说。她手抚上斯内普的脖颈，满眼都是温柔的爱意。
+
+                  斯内普的目光则很严肃：“你不是应该在魔法世界——”
+
+                  莉莉似乎还想叙旧，她打断道：“我还记得，那棵树下，你说虽然自己没有魔法，但也要用自己的力量保护弱小的人，你做到了。在法庭战斗的...</p>
+
               </div>
               <span class="fold">
                 展开
@@ -399,12 +338,22 @@
             <div class="triangle"></div>
             <div class="line"></div>
             <div class="comment-content clearfix">
-              <span>LOFTER话题君</span>
+              <span>触手研究专家</span>
               <div class="comment-content-inner">
                 <img src="/public/img/comment6.png" class="comment-img">
-                <h5>LOFTER创作者激励计划“不负有勤人”获奖公布</h5>
-                <p>1、以下创作者在“超潜力新星”赛道中获评为优质创作者</p>
-                <u> @莫得蓝颜色 @咒高第一干饭人 @叫我三岁就好了 @吱枝七 @E.S.P @亦贝paradox @零度杀戮 @宋辞柒 ...</u>
+                <h5>【斯莉X逆转裁判】手捧百合花的逆转4</h5>
+                <p>1980年10月31日上午11时16分地方法院被告第2休息室
+
+                  斯内普打开休息室大门的时候，里克正挽着莉莉的手走进来。男孩望着莉莉说：“姐姐，你看见莱了是吗？你也看见了……那个杀了她的人？”
+
+                  莉莉微笑，百合的清幽从中绽放：“姐姐也只看到了这一幕而已，事实的真相，你的辩护人哥哥会帮你找出来。”说着，她拍拍里克，向斯内普走过来。
+
+                  “律师的制服很适合你，西弗。”莉莉笑着说。她手抚上斯内普的脖颈，满眼都是温柔的爱意。
+
+                  斯内普的目光则很严肃：“你不是应该在魔法世界——”
+
+                  莉莉似乎还想叙旧，她打断道：“我还记得，那棵树下，你说虽然自己没有魔法，但也要用自己的力量保护弱小的人，你做到了。在法庭战斗的...</p>
+
               </div>
               <span class="fold">
                 展开
@@ -430,12 +379,22 @@
             <div class="triangle"></div>
             <div class="line"></div>
             <div class="comment-content clearfix">
-              <span>LOFTER话题君</span>
+              <span>触手研究专家</span>
               <div class="comment-content-inner">
                 <img src="/public/img/comment7.jpg" class="comment-img">
-                <h5>LOFTER创作者激励计划“不负有勤人”获奖公布</h5>
-                <p>1、以下创作者在“超潜力新星”赛道中获评为优质创作者</p>
-                <u> @莫得蓝颜色 @咒高第一干饭人 @叫我三岁就好了 @吱枝七 @E.S.P @亦贝paradox @零度杀戮 @宋辞柒 ...</u>
+                <h5>【斯莉X逆转裁判】手捧百合花的逆转4</h5>
+                <p>1980年10月31日上午11时16分地方法院被告第2休息室
+
+                  斯内普打开休息室大门的时候，里克正挽着莉莉的手走进来。男孩望着莉莉说：“姐姐，你看见莱了是吗？你也看见了……那个杀了她的人？”
+
+                  莉莉微笑，百合的清幽从中绽放：“姐姐也只看到了这一幕而已，事实的真相，你的辩护人哥哥会帮你找出来。”说着，她拍拍里克，向斯内普走过来。
+
+                  “律师的制服很适合你，西弗。”莉莉笑着说。她手抚上斯内普的脖颈，满眼都是温柔的爱意。
+
+                  斯内普的目光则很严肃：“你不是应该在魔法世界——”
+
+                  莉莉似乎还想叙旧，她打断道：“我还记得，那棵树下，你说虽然自己没有魔法，但也要用自己的力量保护弱小的人，你做到了。在法庭战斗的...</p>
+
               </div>
               <span class="fold">
                 展开
@@ -461,12 +420,22 @@
             <div class="triangle"></div>
             <div class="line"></div>
             <div class="comment-content clearfix">
-              <span>LOFTER话题君</span>
+              <span>触手研究专家</span>
               <div class="comment-content-inner">
                 <img src="/public/img/comment1.jpg" class="comment-img">
-                <h5>LOFTER创作者激励计划“不负有勤人”获奖公布</h5>
-                <p>1、以下创作者在“超潜力新星”赛道中获评为优质创作者</p>
-                <u> @莫得蓝颜色 @咒高第一干饭人 @叫我三岁就好了 @吱枝七 @E.S.P @亦贝paradox @零度杀戮 @宋辞柒 ...</u>
+                <h5>【斯莉X逆转裁判】手捧百合花的逆转4</h5>
+                <p>1980年10月31日上午11时16分地方法院被告第2休息室
+
+                  斯内普打开休息室大门的时候，里克正挽着莉莉的手走进来。男孩望着莉莉说：“姐姐，你看见莱了是吗？你也看见了……那个杀了她的人？”
+
+                  莉莉微笑，百合的清幽从中绽放：“姐姐也只看到了这一幕而已，事实的真相，你的辩护人哥哥会帮你找出来。”说着，她拍拍里克，向斯内普走过来。
+
+                  “律师的制服很适合你，西弗。”莉莉笑着说。她手抚上斯内普的脖颈，满眼都是温柔的爱意。
+
+                  斯内普的目光则很严肃：“你不是应该在魔法世界——”
+
+                  莉莉似乎还想叙旧，她打断道：“我还记得，那棵树下，你说虽然自己没有魔法，但也要用自己的力量保护弱小的人，你做到了。在法庭战斗的...</p>
+
               </div>
               <span class="fold">
                 展开
@@ -518,49 +487,85 @@
       </div>
     </div>
     <div class="sidebar">
-      <div class="user">
-        <div class="user-id">
-          <span>Danmoits</span>
-          <span>danmoits</span>
-        </div>
-        <div class="down">
-          <i class="iconfont">&#xe616;</i>
-        </div>
-        <div class="user-info">
-          <span>关注</span>
-          <span>21</span>
+      <div class="active-user">
+        <p>参与用户</p>
+        <a href="javascript:;">
+          <img src="/public/img/side-avatar01.jpg">
+          <div>
+            <span>像素ROBUT</span>
+            <span>活跃用户</span>
+          </div>
+          <i class="iconfont">&#xe640;</i>
+        </a>
+        <a href="javascript:;">
+          <img src="/public/img/side-avatar01.jpg">
+          <div>
+            <span>像素ROBUT</span>
+            <span>活跃用户</span>
+          </div>
+          <i class="iconfont">&#xe640;</i>
+        </a>
+        <a href="javascript:;">
+          <img src="/public/img/side-avatar01.jpg">
+          <div>
+            <span>像素ROBUT</span>
+            <span>活跃用户</span>
+          </div>
+          <i class="iconfont">&#xe640;</i>
+        </a>
+        <a href="javascript:;">
+          <img src="/public/img/side-avatar01.jpg">
+          <div>
+            <span>像素ROBUT</span>
+            <span>活跃用户</span>
+          </div>
+          <i class="iconfont">&#xe640;</i>
+        </a>
+        <a href="javascript:;">
+          <img src="/public/img/side-avatar01.jpg">
+          <div>
+            <span>像素ROBUT</span>
+            <span>活跃用户</span>
+          </div>
+          <i class="iconfont">&#xe640;</i>
+        </a>
+        <a href="javascript:;">
+          <img src="/public/img/side-avatar01.jpg">
+          <div>
+            <span>像素ROBUT</span>
+            <span>活跃用户</span>
+          </div>
+          <i class="iconfont">&#xe640;</i>
+        </a>
+        <a href="javascript:;">
+          <img src="/public/img/side-avatar01.jpg">
+          <div>
+            <span>像素ROBUT</span>
+            <span>活跃用户</span>
+          </div>
+          <i class="iconfont">&#xe640;</i>
+        </a>
+        <a href="javascript:;">
+          <img src="/public/img/side-avatar01.jpg">
+          <div>
+            <span>像素ROBUT</span>
+            <span>活跃用户</span>
+          </div>
+          <i class="iconfont">&#xe640;</i>
+        </a>
+        <a href="javascript:;">
+          <img src="/public/img/side-avatar01.jpg">
+          <div>
+            <span>像素ROBUT</span>
+            <span>活跃用户</span>
+          </div>
+          <i class="iconfont">&#xe640;</i>
+        </a>
+        <div class="more-users">
+          显示更多用户
         </div>
       </div>
-      <div class="creator-center">
-        <div class="creator-center-item">
-          创作者中心
-          <i class="iconfont">&#xe63c;</i>
-        </div>
-        <div class="creator-center-item">
-          文章
-        </div>
-        <div class="creator-center-item">
-          合集
-        </div>
-        <div class="creator-center-item">
-          喜欢
-        </div>
-        <div class="creator-center-item">
-          钱包
-        </div>
-        <div class="creator-center-item">
-          草稿
-        </div>
-        <div class="creator-center-item_">
-          个人主页设置
-        </div>
-        <div class="creator-center-item_">
-          批量管理文章
-        </div>
-      </div>
-      <div class="sideimg1">
-      </div>
-      <div class="sideimg2">
+      <div class="sideimg">
       </div>
       <div class="topic">
         <span>决战平安京</span>
@@ -583,67 +588,11 @@
           <span>更多话题</span>
         </div>
       </div>
-      <div class="qrcode">
-        <p>使用手机访问LOFTER</p>
-        <div class="qrcode-item">
-          <img src="/public/img/qrcode_android.jpg">
-          <span>安卓APP下载</span>
-          <span>扫码下载安卓LOFTER APP</span>
-        </div>
-        <div class="qrcode-item">
-          <img src="/public/img/qrcode_wechat.jpg">
-          <span>微信小程序</span>
-          <span>使用微信扫码打开LOFTER微信小程序</span>
-        </div>
-        <div class="qrcode-item">
-          <img src="/public/img/qrcode_qq.jpg">
-          <span>QQ小程序</span>
-          <span>使用QQ扫码打开LOFTER QQ小程序</span>
-        </div>
-        <div class="qrcode-item">
-          <img src="/public/img/qrcode_apple.jpg">
-          <span>苹果APP下载</span>
-          <span>扫码下载iOS LOFTER APP</span>
-        </div>
-      </div>
-      <div class="user user-fixed">
-        <div class="user-id">
-          <span>Danmoits</span>
-          <span>danmoits</span>
-        </div>
-        <div class="down">
-          <i class="iconfont">&#xe616;</i>
-        </div>
-        <div class="user-info">
-          <span>关注</span>
-          <span>21</span>
-        </div>
-      </div>
-      <div class="creator-center creator-center-fixed">
-        <div class="creator-center-item">
-          创作者中心
-          <i class="iconfont">&#xe63c;</i>
-        </div>
-        <div class="creator-center-item">
-          文章
-        </div>
-        <div class="creator-center-item">
-          合集
-        </div>
-        <div class="creator-center-item">
-          喜欢
-        </div>
-        <div class="creator-center-item">
-          钱包
-        </div>
-        <div class="creator-center-item">
-          草稿
-        </div>
-        <div class="creator-center-item_">
-          个人主页设置
-        </div>
-        <div class="creator-center-item_">
-          批量管理文章
+      <div class="_qrcode">
+        <img src="/public/img/qrcode_android.jpg">
+        <div>
+          <p>下载移动端</p>
+          <p>关注最新消息</p>
         </div>
       </div>
     </div>
@@ -651,7 +600,7 @@
   <div class="to-top">
     <i class="iconfont">&#xe60b;</i>
   </div>
-  <script src="/public/js/index.js"></script>
+  <script src="/public/js/tag.js"></script>
 </body>
 
 </html>

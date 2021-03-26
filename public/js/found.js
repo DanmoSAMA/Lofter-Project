@@ -144,3 +144,31 @@ let timer_toTop = setInterval(() => {
 toTop.onclick = function () {
   document.documentElement.scrollTop = 0;
 }
+
+//点击标签就填入表单
+const tagInput = document.getElementsByClassName("topbar-input")[0].getElementsByTagName("input")[0];
+const popUp = document.getElementsByClassName("pop-up")[0];
+const tagArr = document.getElementsByClassName("tag");
+
+//只用CSS :focus 伪类有局限，点击到标签前弹出层就会关闭，所以用JS改进：
+tagInput.onfocus = function () {
+  popUp.style.visibility = "visible";
+  popUp.style.top = "78px";
+  document.addEventListener("click", function (event) {
+    let cDom = popUp;
+    let tDom = event.target;
+    if (cDom === tDom || cDom.contains(tDom) || tDom === tagInput) {
+      cDom.style.visibility = "visible";
+    } else {
+      cDom.style.visibility = "hidden";
+      cDom.style.top = "67px";
+    }
+  });
+}
+
+for (let i = 0; i < tagArr.length; i++) {
+  tagArr[i].onclick = function () {
+    let temp = (tagArr[i].innerText).replace(/#/,'');
+    tagInput.value = temp;
+  }
+}

@@ -54,7 +54,8 @@ a{
     position: fixed;
     z-index: 9999;
 }
-.topbar > div{
+.topbar > div,
+.topbar > form{
     float: left;
     line-height: 64px;
 }
@@ -106,10 +107,11 @@ a{
 .topbar-input input:focus ~ span{
     display: none;
 }
-.topbar-input input:focus ~ .pop-up{
+/* .topbar-input input:focus ~ .pop-up{
     visibility: visible;
     top: 78px;
-}
+} */
+
 .topbar-input > i{
     position: absolute;
     left: 15px;
@@ -252,7 +254,7 @@ a{
   top: -6px;
   left: 124px;
 }
-.login-pop > li{
+.login-pop  li{
   font-size: 14px;
   color: #fff;
   height: 48px;
@@ -262,14 +264,14 @@ a{
   cursor: pointer;
   transition:  background-color .2s;
 }
-.login-pop > li:hover{
+.login-pop  li:hover{
   background-color: #393939;
 }
-.login-pop > li > i{
+.login-pop  li > i{
   margin-right: 6px;
   vertical-align: middle;
 }
-.login-pop > li > a{
+.login-pop  li > a{
   color: #fff;
 }
 /*user1和user2共用的右上角部分的样式*/
