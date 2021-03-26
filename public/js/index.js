@@ -89,6 +89,7 @@ const cancelBtn = document.getElementsByClassName("cancel-btn")[0];
 const myHead = document.getElementsByClassName("my-head")[0];
 const mask = document.getElementsByClassName("mask")[0];
 const pageMask = document.getElementsByClassName("page-mask")[0];
+const triangle = document.getElementsByClassName("send-triangle")[0];
 
 sendBtn.onclick = function () {
   send.style.height = "515px";
@@ -96,6 +97,7 @@ sendBtn.onclick = function () {
   myHead.style.height = "64px";
   mask.style.height = "113px";
   pageMask.className = "page-mask show";
+  triangle.style.display = "block";
 }
 cancelBtn.onclick = function () {
   send.style.height = "0";
@@ -104,6 +106,7 @@ cancelBtn.onclick = function () {
   setTimeout(() => {
     mask.style.height = "110px";
     pageMask.className = "page-mask";
+    triangle.style.display = "none";
   }, 300);
 }
 

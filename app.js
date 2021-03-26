@@ -49,7 +49,7 @@ http
     if (pathname === '/') {
       fs.readFile('./views/index.html', function (err, data) {
         if (err) {
-          return res.end('404 Not Found.')
+          return res.end('404 Not Found.');
         }
         let htmlStr = template.render(data.toString(), {
           comments: comments
@@ -60,7 +60,7 @@ http
     else if (pathname === '/found') {
       fs.readFile('./views/found.html', function (err, data) {
         if (err) {
-          return res.end('404 Not Found.')
+          return res.end('404 Not Found.');
         }
         res.end(data)
       });
@@ -68,7 +68,7 @@ http
     else if (pathname === '/user_1') {
       fs.readFile('./views/user_1.html', function (err, data) {
         if (err) {
-          return res.end('404 Not Found.')
+          return res.end('404 Not Found.');
         }
         res.end(data);
       });
@@ -76,7 +76,7 @@ http
     else if (pathname === '/user_2') {
       fs.readFile('./views/user_2.html', function (err, data) {
         if (err) {
-          return res.end('404 Not Found.')
+          return res.end('404 Not Found.');
         }
         res.end(data);
       });
@@ -84,7 +84,7 @@ http
     else if (pathname === '/user1_artical1') {
       fs.readFile('./views/user1_artical1.html', function (err, data) {
         if (err) {
-          return res.end('404 Not Found.')
+          return res.end('404 Not Found.');
         }
         res.end(data);
       });
@@ -92,15 +92,15 @@ http
     else if (pathname === '/user1_artical2') {
       fs.readFile('./views/user1_artical2.html', function (err, data) {
         if (err) {
-          return res.end('404 Not Found.')
+          return res.end('404 Not Found.');
         }
         res.end(data);
       });
     }
-    else if (pathname.indexOf('/public/') === 0) {
+    else if (pathname.indexOf('/public') === 0) {
       fs.readFile('.' + pathname, function (err, data) {
         if (err) {
-          return res.end('404 Not Found.')
+          return res.end('404 Not Found.');
         }
         res.end(data)
       })
@@ -126,7 +126,7 @@ http
     else if (pathname === '/login') {
       fs.readFile('./views/login.html', function (err, data) {
         if (err) {
-          return res.end('404 Not Found.')
+          return res.end('404 Not Found.');
         }
         res.end(data);
       });
@@ -230,7 +230,7 @@ http
     else if (pathname === '/tag1') {
       fs.readFile('./views/tag1.html', function (err, data) {
         if (err) {
-          return res.end('404 Not Found.')
+          return res.end('404 Not Found.');
         }
         res.end(data);
       });
@@ -238,7 +238,7 @@ http
     else if (pathname === '/tag2') {
       fs.readFile('./views/tag2.html', function (err, data) {
         if (err) {
-          return res.end('404 Not Found.')
+          return res.end('404 Not Found.');
         }
         res.end(data);
       });

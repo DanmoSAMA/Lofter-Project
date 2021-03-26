@@ -148,6 +148,7 @@ a{
     visibility: hidden;
     transition: top .4s;
     z-index: 9999;
+    overflow: hidden;
 }
 .topbar-input .pop-up::before{
     content: '';

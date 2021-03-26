@@ -169,6 +169,11 @@
 .sidebar ._qrcode{
   width: 146px;
 }
+.sidebar ._qrcode._qrcode-fixed{
+  position: fixed;
+  display: none;
+  top: 80px;
+}
 .sidebar ._qrcode > img{
   width: 146px;
   height: 146px;

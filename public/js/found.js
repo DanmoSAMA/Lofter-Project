@@ -148,7 +148,7 @@ toTop.onclick = function () {
 //点击标签就填入表单
 const tagInput = document.getElementsByClassName("topbar-input")[0].getElementsByTagName("input")[0];
 const popUp = document.getElementsByClassName("pop-up")[0];
-const tagArr = document.getElementsByClassName("tag");
+const tagArr = document.getElementsByClassName("_tag");
 
 //只用CSS :focus 伪类有局限，点击到标签前弹出层就会关闭，所以用JS改进：
 tagInput.onfocus = function () {
@@ -172,3 +172,25 @@ for (let i = 0; i < tagArr.length; i++) {
     tagInput.value = temp;
   }
 }
+
+//登录框
+const lgPopBtn = document.getElementsByClassName("login-pop-btn")[0];
+const lgPop = document.getElementsByClassName("login-pop")[0];
+
+lgPopBtn.onclick = function () {
+  lgPop.style.visibility = "visible";
+  lgPop.style.opacity = "1";
+  lgPop.style.top = "75px";
+  document.addEventListener("click", function (event) {
+    //点击区域外的空白，就关闭弹出框
+    let cDom = lgPop;
+    let tDom = event.target;
+    if (cDom === tDom || cDom.contains(tDom) || tDom === lgPopBtn || tDom === document.querySelector(".login-pop-btn > i")) {
+      cDom.style.visibility = "visible";
+    } else {
+      cDom.style.visibility = "hidden";
+      cDom.style.opacity = "0";
+      cDom.style.top = "65px";
+    }
+  });
+};

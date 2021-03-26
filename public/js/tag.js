@@ -117,7 +117,17 @@ for (let i = 0; i < tagArr.length; i++) {
   }
 }
 
-
+//侧边栏
+const _qrcode = document.getElementsByClassName("_qrcode-fixed")[0];
+let timer_sideBar = setInterval(() => {
+  scrollTop = parseInt(document.documentElement.scrollTop);
+  if (scrollTop > 1400) {
+    _qrcode.style.display = "block";
+  }
+  else {
+    _qrcode.style.display = "none";
+  }
+}, 100);
 
 
 
