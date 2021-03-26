@@ -72,19 +72,14 @@ const lgPopBtn = document.getElementsByClassName("login-pop-btn")[0];
 const lgPop = document.getElementsByClassName("login-pop")[0];
 
 lgPopBtn.onclick = function () {
-  lgPop.style.visibility = "visible";
-  lgPop.style.opacity = "1";
-  lgPop.style.top = "75px";
-  document.addEventListener("click", function(event) {
+  lgPop.className = "login-pop visible";
+  document.addEventListener("click", function (event) {
     //点击区域外的空白，就关闭弹出框
-    let cDom = lgPop;
     let tDom = event.target;
-    if (cDom === tDom || cDom.contains(tDom) || tDom === lgPopBtn || tDom === document.querySelector(".login-pop-btn > i")) {
-      cDom.style.visibility = "visible";
+    if (lgPop === tDom || lgPop.contains(tDom) || tDom === lgPopBtn || tDom === document.querySelector(".login-pop-btn > i")) {
+      lgPop.style.visibility = "visible";
     } else {
-      cDom.style.visibility = "hidden";
-      cDom.style.opacity = "0";
-      cDom.style.top = "65px";
+      lgPop.className = "login-pop";
     }
   });
 };
@@ -96,17 +91,12 @@ const tagArr = document.getElementsByClassName("tag");
 
 //只用CSS :focus 伪类有局限，点击到标签前弹出层就会关闭，所以用JS改进：
 tagInput.onfocus = function () {
-  popUp.style.visibility = "visible";
-  popUp.style.top = "78px";
+  popUp.className = "pop-up visible";
   document.addEventListener("click", function (event) {
-    let cDom = popUp;
     let tDom = event.target;
-    if (cDom === tDom || cDom.contains(tDom) || tDom === tagInput) {
-      cDom.style.visibility = "visible";
-    } else {
-      cDom.style.visibility = "hidden";
-      cDom.style.top = "67px";
-    }
+    if (popUp !== tDom && !popUp.contains(tDom) && tDom !== tagInput) {
+      popUp.className = "pop-up";
+    };
   });
 }
 

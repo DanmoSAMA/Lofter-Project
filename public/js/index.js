@@ -93,16 +93,14 @@ const triangle = document.getElementsByClassName("send-triangle")[0];
 
 sendBtn.onclick = function () {
   send.style.height = "515px";
-  myHead.style.width = "64px";
-  myHead.style.height = "64px";
+  myHead.className = "my-head turn-small"
   mask.style.height = "113px";
   pageMask.className = "page-mask show";
   triangle.style.display = "block";
 }
 cancelBtn.onclick = function () {
   send.style.height = "0";
-  myHead.style.width = "110px";
-  myHead.style.height = "110px";
+  myHead.className = "my-head"
   setTimeout(() => {
     mask.style.height = "110px";
     pageMask.className = "page-mask";
@@ -115,20 +113,13 @@ const lgPopBtn = document.getElementsByClassName("login-pop-btn")[0];
 const lgPop = document.getElementsByClassName("login-pop")[0];
 
 lgPopBtn.onclick = function () {
-  lgPop.style.visibility = "visible";
-  lgPop.style.opacity = "1";
-  lgPop.style.top = "75px";
+  lgPop.className = "login-pop visible";
   document.addEventListener("click", function (event) {
     //点击区域外的空白，就关闭弹出框
-    let cDom = lgPop;
     let tDom = event.target;
-    if (cDom === tDom || cDom.contains(tDom) || tDom === lgPopBtn || tDom === document.querySelector(".login-pop-btn > i")) {
-      cDom.style.visibility = "visible";
-    } else {
-      cDom.style.visibility = "hidden";
-      cDom.style.opacity = "0";
-      cDom.style.top = "65px";
-    }
+    if (lgPop !== tDom && !lgPop.contains(tDom) && tDom !== lgPopBtn && tDom !== document.querySelector(".login-pop-btn > i")) {
+      lgPop.className = "login-pop";
+    };
   });
 };
 
@@ -139,17 +130,12 @@ const tagArr = document.getElementsByClassName("tag");
 
 //只用CSS :focus 伪类有局限，点击到标签前弹出层就会关闭，所以用JS改进：
 tagInput.onfocus = function () {
-  popUp.style.visibility = "visible";
-  popUp.style.top = "78px";
+  popUp.className = "pop-up visible";
   document.addEventListener("click", function (event) {
-    let cDom = popUp;
     let tDom = event.target;
-    if (cDom === tDom || cDom.contains(tDom) || tDom === tagInput) {
-      cDom.style.visibility = "visible";
-    } else {
-      cDom.style.visibility = "hidden";
-      cDom.style.top = "67px";
-    }
+    if (popUp !== tDom && !popUp.contains(tDom) && tDom !== tagInput) {
+      popUp.className = "pop-up";
+    };
   });
 }
 

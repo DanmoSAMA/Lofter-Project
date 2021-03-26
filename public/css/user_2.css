@@ -1,140 +1,165 @@
-body{
-    background-color: #fff;
+body {
+  background-color: #fff;
 }
-.main{
-    width: 1280px;
-    margin: 0 auto;
-    position: relative;
-    top: 30px;
+
+.main {
+  width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  top: 30px;
 }
-.user-info{
-    width: 700px;
-    height: 260px;
-    margin: 0 auto;
+
+.user-info {
+  width: 700px;
+  height: 260px;
+  margin: 0 auto;
 }
-.user-info > img{
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+
+.user-info>img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
 }
-.user-info > p:nth-of-type(1){
-    font-size: 25px;
-    margin-top: 22px;
+
+.user-info>p:nth-of-type(1) {
+  font-size: 25px;
+  margin-top: 22px;
 }
-.user-info > span{
-    display: inline-block;
-    padding: 3px 15px;
-    height: 24px;
-    line-height: 24px;
-    margin-top: 32px;
-    font-size: 12px;
-    width: 121.4px;
-    border: 2px solid #86CECE;
-    border-top-right-radius: 9px;
-    border-bottom-right-radius: 9px;
-    border-top-left-radius: 9px;
-    border-bottom-left-radius: 9px;
+
+.user-info>span {
+  display: inline-block;
+  padding: 3px 15px;
+  height: 24px;
+  line-height: 24px;
+  margin-top: 32px;
+  font-size: 12px;
+  width: 121.4px;
+  border: 2px solid #86CECE;
+  border-top-right-radius: 9px;
+  border-bottom-right-radius: 9px;
+  border-top-left-radius: 9px;
+  border-bottom-left-radius: 9px;
 }
-.user-info > p:nth-of-type(2){
-    margin-top: 45px;
-    font-size: 12px;
-    color: #868686;
+
+.user-info>p:nth-of-type(2) {
+  margin-top: 45px;
+  font-size: 12px;
+  color: #868686;
 }
-.works{
-    width: 1270px;
-    margin-top: 50px;
-    display: grid;
-    padding-left: 10px;
-    grid-template-columns: 300px 300px 300px 300px;
-    grid-template-rows: 233px 233px 233px;
-    gap: 20px 20px;
+
+.works {
+  width: 1270px;
+  margin-top: 50px;
+  display: grid;
+  padding-left: 10px;
+  grid-template-columns: 300px 300px 300px 300px;
+  grid-template-rows: 233px 233px 233px;
+  gap: 20px 20px;
 }
-.works > div{
-    width: 300px;
-    height: 233px;
-    border: 1px solid #DDD;
-    position: relative;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, .2);
+
+.works>div {
+  width: 300px;
+  height: 233px;
+  border: 1px solid #DDD;
+  position: relative;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, .2);
 }
-.works img{
-    width: 300px;
-    height: 200px;
-    transition: opacity .3s;
-    cursor: pointer;
-    margin-top: -2px;
+
+.works img {
+  width: 300px;
+  height: 200px;
+  transition: opacity .3s;
+  cursor: pointer;
+  margin-top: -2px;
 }
-.works img:hover{
-    opacity: .75;
+
+.works img:hover {
+  opacity: .75;
 }
-.works .data{
-    height: 33px;
-    line-height: 33px;
-    border-top: 1px solid #DDD;
-    margin-top: -1px;
+
+.works .data {
+  height: 33px;
+  line-height: 33px;
+  border-top: 1px solid #DDD;
+  margin-top: -1px;
 }
-.works .data > span{
-    float: left;
-    font-size: 12px;
-    color: #999;
-    cursor: pointer;
-    transition: color .3s;
+
+.works .data>span {
+  float: left;
+  font-size: 12px;
+  color: #999;
+  cursor: pointer;
+  transition: color .3s;
 }
-.works .data > span:hover{
-    color: #A7C6C0;
+
+.works .data>span:hover {
+  color: #A7C6C0;
 }
-.works .data > span > i{
-    color: #DDD;
-    margin-right: 4px;
+
+.works .data>span>i {
+  color: #DDD;
+  margin-right: 4px;
 }
-.works .data > span:nth-of-type(1){
-    width: 107px;
-    border-right: 1px solid #DDD;
+
+.works .data>span:nth-of-type(1) {
+  width: 107px;
+  border-right: 1px solid #DDD;
 }
-.works .data > span:nth-of-type(2){
-    width: 96px;
-    border-right: 1px solid #DDD;
+
+.works .data>span:nth-of-type(2) {
+  width: 96px;
+  border-right: 1px solid #DDD;
 }
-.works .data > span:nth-of-type(3){
-    width: 95px;
+
+.works .data>span:nth-of-type(3) {
+  width: 95px;
 }
-.works-content{
-    width: 300px;
-    height: 200px;
-    position: relative;
+
+.works-content {
+  width: 300px;
+  height: 200px;
+  position: relative;
 }
-.works-content h1{
-    font-size: 20px;
-    color: #666;
-    position: absolute;
-    top: 15px;
-    left: 15px;
+
+.works-content h1 {
+  font-size: 20px;
+  color: #666;
+  position: absolute;
+  top: 15px;
+  left: 15px;
 }
-.works-content p{
-    font-size: 12px;
-    position: absolute;
-    color: #999;
-    left: 15px;
-    top: 50px;
+
+.works-content p {
+  font-size: 12px;
+  position: absolute;
+  color: #999;
+  left: 15px;
+  top: 50px;
 }
-.next-page{
-    width: 1260px;
-    height: 16px;
-    padding: 0 10px;
-    margin-top: 55px;
-    font-size: 12px;
-    color: #888;
+
+.next-page {
+  width: 1260px;
+  height: 16px;
+  padding: 0 10px;
+  margin-top: 55px;
+  font-size: 12px;
+  color: #888;
 }
-.next-page > span:nth-of-type(1){
-    cursor: pointer;
+
+.next-page>span:nth-of-type(1) {
+  cursor: pointer;
 }
-.next-page > span:nth-of-type(1):hover{
-    color: #86CECE;
+
+.next-page>span:nth-of-type(1):hover {
+  color: #86CECE;
 }
-.next-page > span:nth-of-type(2){
-    float: right;
+
+.next-page>span:nth-of-type(2) {
+  float: right;
 }
-.footer{
-    margin: 100px 0 100px 0;
-    font-size: 12px;
-    color: #BBB;
+
+.footer {
+  margin: 100px 0 100px 0;
+  font-size: 12px;
+  color: #BBB;
 }
